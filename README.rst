@@ -30,7 +30,7 @@ Introduction
 
 The GrimReapersPie is an Apache2 Licensed library, written in python, to (un)register
 long-running processes with the `GrimReaper`_.
-Processes running longer than, the time given during the registration, will be killed
+Processes running longer than the time given during the registration, will be killed
 by the `GrimReaper`_ daemon.
 
 Prerequisites
