@@ -1,6 +1,29 @@
+
 ==============
 GrimReapersPie
 ==============
+
+
+.. image:: https://img.shields.io/pypi/dm/GrimReapersPie.svg
+.. image:: https://img.shields.io/pypi/v/GrimReapersPie.svg
+.. image:: https://img.shields.io/github/tag/matee911/GrimReaperPie.svg
+.. image:: https://img.shields.io/github/release/matee911/GrimReapersPie.svg
+.. image:: https://img.shields.io/github/commits-since/matee911/GrimReapersPie/0.1.0a1.svg
+.. image:: https://img.shields.io/pypi/pyversions/GrimReapersPie.svg
+.. image:: https://img.shields.io/pypi/wheel/GrimReapersPie.svg
+.. image:: https://img.shields.io/pypi/status/GrimReapersPie.svg
+.. image:: https://img.shields.io/pypi/l/GrimReapersPie.svg
+
+.. image:: https://img.shields.io/github/issues/matee911/GrimReapersPie.svg   
+   :target: https://github.com/matee911/GrimReaper/issues
+   
+.. image:: https://img.shields.io/twitter/url/https/github.com/matee911/GrimReapersPie.svg?style=social
+    :target: https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D
+    
+.. image:: https://img.shields.io/twitter/url/https/pypi.python.org/pypi/GrimReapersPie.svg?style=social
+   :target: https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D
+  
+
 
 Introduction
 ------------
