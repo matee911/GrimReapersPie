@@ -6,7 +6,7 @@ GrimReapersPie
 
 .. image:: https://img.shields.io/pypi/dm/GrimReapersPie.svg
 .. image:: https://img.shields.io/pypi/v/GrimReapersPie.svg
-.. image:: https://img.shields.io/github/tag/matee911/GrimReaperPie.svg
+.. image:: https://img.shields.io/github/tag/matee911/GrimReapersPie.svg
 .. image:: https://img.shields.io/github/release/matee911/GrimReapersPie.svg
 .. image:: https://img.shields.io/github/commits-since/matee911/GrimReapersPie/0.1.0a1.svg
 .. image:: https://img.shields.io/pypi/pyversions/GrimReapersPie.svg
