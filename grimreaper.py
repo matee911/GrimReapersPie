@@ -28,7 +28,7 @@ class GrimReaper(object):
         try:
             self._socket.connect(self._path)
         except socket.error as e:
-            log.error('Unnable to connect to the socket "%s": %s', self._path, e)
+            log.error('Unable to connect to the socket "%s": %s', self._path, e)
             self.on_connection_error(e)
 
             if e.errno == socket.errno.ENOENT:
@@ -53,7 +53,7 @@ class GrimReaper(object):
             self._socket.sendall(msg.encode('utf-8'))
             log.debug('Registered process (PID=%s; timeout=%s)', pid, timeout)
         else:
-            log.warning('Unnable to register the process (PID=%s).', pid)
+            log.warning('Unable to register the process (PID=%s).', pid)
 
     def unregister(self, pid=None):
         if pid is None:
@@ -64,7 +64,7 @@ class GrimReaper(object):
             self._socket.sendall(msg.encode('utf-8'))
             log.debug('Unregistered process (PID=%s)', pid)
         else:
-            log.warning('Unnable to unregister the process (PID=%s).', pid)
+            log.warning('Unable to unregister the process (PID=%s).', pid)
 
     def on_connection_error(self, exc):
         pass
