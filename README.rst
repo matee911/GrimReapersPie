@@ -16,19 +16,19 @@ GrimReapersPie
 .. image:: https://codeclimate.com/repos/55f5e976e30ba07f94005456/badges/de9b8f237d1a71daab27/gpa.svg
    :target: https://codeclimate.com/repos/55f5e976e30ba07f94005456/feed
    :alt: Code Climate
-   
+
 .. image:: https://scrutinizer-ci.com/g/matee911/GrimReapersPie/badges/quality-score.png?b=master
    :target: https://scrutinizer-ci.com/g/matee911/GrimReapersPie/
 
-.. image:: https://img.shields.io/github/issues/matee911/GrimReapersPie.svg   
+.. image:: https://img.shields.io/github/issues/matee911/GrimReapersPie.svg
    :target: https://github.com/matee911/GrimReaper/issues
-   
+
 .. image:: https://img.shields.io/twitter/url/https/github.com/matee911/GrimReapersPie.svg?style=social
     :target: https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D
-    
+
 .. image:: https://img.shields.io/twitter/url/https/pypi.python.org/pypi/GrimReapersPie.svg?style=social
    :target: https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D
-  
+
 
 
 Introduction
@@ -52,7 +52,7 @@ To install this library, simply:
 
 .. code-block:: bash
 
-    $ pip install GrimReaperPie
+    $ pip install --pre GrimReaperPie
 
 Usage
 =====

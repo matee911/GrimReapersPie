@@ -38,6 +38,7 @@ setup(
     author_email='matee+grimreaperspie@matee.net',
     url='https://github.com/matee911/GrimReapersPie',
     py_modules=['grimreaper'],
+    package_data={'': ['LICENSE', 'CHANGES.rst', 'README.rst']},
     license='Apache 2.0',
     keywords='management',
     classifiers=(
