@@ -4,7 +4,7 @@ import logging
 import os
 import socket
 
-__version__ = '0.1.0a3'
+__version__ = '0.1.0a4'
 
 log = logging.getLogger(__name__)
 
@@ -32,6 +32,10 @@ class GrimReaper(object):
         try:
             self._socket.connect(self._path)
         except socket.error as e:
+            # Transport endpoint is already connected
+            if e.errno == 106:
+                return True
+
             log.error('Unable to connect to the socket "%s": %s', self._path, e)
             self.on_connection_error(e)
 

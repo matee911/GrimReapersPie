@@ -52,7 +52,7 @@ To install this library, simply:
 
 .. code-block:: bash
 
-    $ pip install --pre GrimReaperPie
+    $ pip install --pre GrimReapersPie
 
 Usage
 =====
