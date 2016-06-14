@@ -4,23 +4,27 @@ import logging
 import os
 import socket
 
-__version__ = '0.1.0a2'
+__version__ = '0.1.0a3'
 
 log = logging.getLogger(__name__)
 
 
 class GrimReaper(object):
-    def __init__(self, socket_path='/tmp/grimreaper.socket', process_timeout=30):
+    def __init__(self, socket_path='/tmp/GrimReaper.socket', process_timeout=30):
         self._path = socket_path
         self._socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        self._socket.setblocking(0)
         self._process_timeout = process_timeout
         self._connect()
 
     def _is_connected(self):
         try:
             self._socket.recv(0)
-        except socket.error:
-            return self._connect()
+        except socket.error as e:
+            if e.errno == socket.errno.EDEADLK:
+                return True
+            else:
+                return self._connect()
         else:
             return True
 
@@ -36,6 +40,9 @@ class GrimReaper(object):
                 return False
             elif e.errno == socket.errno.ECONNREFUSED:
                 # Connection refused
+                return False
+            elif e.errno == socket.errno.EPIPE:
+                # Broken pipe
                 return False
 
             raise
