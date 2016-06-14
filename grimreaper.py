@@ -4,7 +4,7 @@ import logging
 import os
 import socket
 
-__version__ = '0.1.0a4'
+__version__ = '0.1.0a5'
 
 log = logging.getLogger(__name__)
 
@@ -66,6 +66,7 @@ class GrimReaper(object):
             except socket.error as e:
                 if e.errno == socket.errno.EPIPE:
                     self._connect()
+                    return
 
             log.debug('Registered process (PID=%s; timeout=%s)', pid, timeout)
         else:
@@ -82,6 +83,7 @@ class GrimReaper(object):
             except socket.error as e:
                 if e.errno == socket.errno.EPIPE:
                     self._connect()
+                    return
 
             log.debug('Unregistered process (PID=%s)', pid)
         else:
