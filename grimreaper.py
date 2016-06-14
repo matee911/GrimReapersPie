@@ -61,7 +61,12 @@ class GrimReaper(object):
 
         if self._is_connected():
             msg = 'register:%s:%s' % (pid, timeout)
-            self._socket.sendall(msg.encode('utf-8'))
+            try:
+                self._socket.sendall(msg.encode('utf-8'))
+            except socket.error as e:
+                if e.errno == socket.errno.EPIPE:
+                    self._connect()
+
             log.debug('Registered process (PID=%s; timeout=%s)', pid, timeout)
         else:
             log.warning('Unable to register the process (PID=%s).', pid)
@@ -72,7 +77,12 @@ class GrimReaper(object):
 
         if self._is_connected():
             msg = 'unregister:%s' % pid
-            self._socket.sendall(msg.encode('utf-8'))
+            try:
+                self._socket.sendall(msg.encode('utf-8'))
+            except socket.error as e:
+                if e.errno == socket.errno.EPIPE:
+                    self._connect()
+
             log.debug('Unregistered process (PID=%s)', pid)
         else:
             log.warning('Unable to unregister the process (PID=%s).', pid)
