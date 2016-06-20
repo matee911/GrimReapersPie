@@ -3,4 +3,9 @@ python:
   - "2.7"
   - "3.4"
   - "3.5"
-install: ""
+install: "pip install flake8 pep257"
+script:
+  - "flake8 ."
+  - "pep257 ."
+  - "py.test"
+  
