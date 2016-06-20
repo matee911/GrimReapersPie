@@ -42,7 +42,7 @@ setup(
     license='Apache 2.0',
     keywords='management',
     classifiers=(
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: POSIX :: Linux',

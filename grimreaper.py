@@ -4,7 +4,7 @@ import logging
 import os
 import socket
 
-__version__ = '0.1.0a9'
+__version__ = '0.1'
 
 log = logging.getLogger(__name__)
 
